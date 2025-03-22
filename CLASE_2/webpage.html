@@ -1,0 +1,30 @@
+<html>
+<script>
+function calculate()
+{
+var hora= document.getElementById("hora").value; <!--definir las variables-->
+var pago= document.getElementById("pago").value;
+var ingresobruto; //ya defini ingreso bruto y no debo escribir de nuevo var-->
+ingresobruto = hora * pago;
+document.getElementById("ingresobruto").value = ingresobruto; //se deposita el valor que nos dio de ingreso bruto-->
+}
+</script>
+<body>
+<label>
+Indique las horas trabajadas:
+</label>
+<br>
+<input type = "text" id= "hora" name= "hora"><br><br>
+<label>
+Indique el pago por hora:
+</label>
+<br>
+<input type = "text" id= "pago" name= "pago"><br><br>
+<input type = "button" value = "Calculate" onclick = "calculate()"/><br><br>
+<label> 
+El ingreso bruto es:
+</label>
+<br>
+<input type = "text" id = "ingresobruto" name = "ingresobruto"><br><br>
+</body>
+</html>

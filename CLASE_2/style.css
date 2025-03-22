@@ -1,0 +1,53 @@
+body {
+    background-color: greenyellow;
+    front-family: Arial, sans-serif;
+}
+h1, h2 {
+    color:rgb(6, 8, 11);
+/*el div en este caso esta haciendolo referencia a la misma imagen*/
+} 
+div {
+    background-image: url('FOTOMJ.jpg');
+    background-size: 50%;
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(green, white, grey); /*se puede colocar to right o to left para acomodar los colores, antes del primer color*/
+    margin: 500px;
+    margin-top: 80px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-left: 500px;
+}
+p {
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgb(255, 255, 255);
+    color: goldenrod;
+    text-align: center;
+    text-decoration: underline;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 500px;
+
+}
+ol {
+    list-style-type: upper-roman;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid black
+}
+tr:nth-child(even){
+    background-color: rgb(184, 173, 160);
+}

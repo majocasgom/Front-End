@@ -1,0 +1,27 @@
+header {
+    text-align: center;
+}
+#name {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: darkblue;
+
+}
+.contenido{
+    font-family:'Times New Roman', Times, serif;
+    font-size: medium;
+}
+.listas{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+h3 {
+    color: darkblue;
+}
+body {
+    background-color:whitesmoke;
+    text-align: left;
+}
+div {
+    background: linear-gradient(darkblue,white);
+    font-size: 25%;
+}

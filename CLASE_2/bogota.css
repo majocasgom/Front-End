@@ -1,0 +1,9 @@
+body {
+    background-color:aliceblue(255, 255, 255);
+}
+header{
+    text-align: center;
+    background: linear-gradient(yellow, rgb(35, 35, 186),rgb(228, 62, 62));
+    font-size: x-large;
+    color: aliceblue;
+}
