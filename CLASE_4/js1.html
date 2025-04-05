@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Color Changer</title>
+  
+</head>
+<body>
+
+  <h1>Change Background Color with Slider</h1>
+  
+  <p>Use the slider to change the background color:</p>
+
+   <input type="range" min="0" max="255" value="255" id="colorSlider">
+  
+  <p>Slider value: <span id="sliderValue">255</span></p>
+
+  <script>
+    // Get the slider element and the span to display the value
+    const slider = document.getElementById("colorSlider");
+    const sliderValue = document.getElementById("sliderValue");
+
+    // Function to change the background color based on slider value
+    slider.addEventListener("input", function() {
+      let value = slider.value;
+      sliderValue.textContent = value; // Display the current value of the slider
+      
+      // Change the background color based on the slider value (using the red color channel)
+      document.body.style.backgroundColor = `rgb(${value}, ${value}, ${value})`;
+    });
+  </script>
+
+</body>
+</html>

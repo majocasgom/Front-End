@@ -1,0 +1,55 @@
+<!--JavaScript en HTML se coloca <script>-->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <link rel = "stylesheet" href = "change_bckgn.css">
+        
+    </head>
+    <style>
+      body {
+        transition: background 1s ease; /* Transición suave para el cambio de fondo */
+      }
+    </style>
+    <body>
+      <body style = "background-color: rgb(16, 203, 54);"></body>
+      
+        <h1>Bogotá</h1>
+        <p>No deslices el slider:</p>
+
+        <input type="range" min="0" max="255" value="255" id="colorSlider">
+  
+       <p>Slider value: <span id="sliderValue">255</span></p>
+
+       <script>
+        // Get the slider element and the span to display the value
+        const slider = document.getElementById("colorSlider");
+        const sliderValue = document.getElementById("sliderValue");
+    
+        // Function to change the background color based on slider value
+        slider.addEventListener("input", function() {
+          let value = slider.value;
+          sliderValue.textContent = value; // Display the current value of the slider
+          
+          // Change the background color based on the slider value (using the red color channel)
+          document.body.style.background = `rgb(${value}, ${value}, ${value})`;
+        });
+      </script>
+      <p id="message">No des click!</p>
+
+      <!-- Button to trigger the function -->
+      <button onclick="changeText()">Click Me</button>
+    
+      <script>
+        // JavaScript function that changes the text of the paragraph
+        function changeText() {
+          // Get the paragraph element by its ID
+          let paragraph = document.getElementById("message");
+          
+          // Change the text content of the paragraph
+          paragraph.textContent = "Un virus ha sido instalado.";
+        }
+      </script>
+    
+        
+    </body>
+    </html>

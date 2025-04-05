@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Function Example</title>
+</head>
+<body>
+
+  <h1>JavaScript Function Example</h1>
+
+  <p id="message">Click the button to change this text.</p>
+
+  <!-- Button to trigger the function -->
+  <button onclick="changeText()">Click Me</button>
+
+  <script>
+    // JavaScript function that changes the text of the paragraph
+    function changeText() {
+      // Get the paragraph element by its ID
+      let paragraph = document.getElementById("message");
+      
+      // Change the text content of the paragraph
+      paragraph.textContent = "The text has been changed!";
+    }
+  </script>
+
+</body>
+</html>

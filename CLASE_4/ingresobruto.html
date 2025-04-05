@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <link rel = "stylesheet" href = "ingresobruto.css">
+          
+      </head>
+<script>
+function calculate()
+{
+var hora= document.getElementById("hora").value; <!--definir las variables-->
+var pago= document.getElementById("pago").value;
+var ingresobruto; //<!--ya defini ingreso bruto y no debo escribir de nuevo var-->
+if(hora<0 || pago<0){
+alert("Ingrese un valor positivo"); //Comentario que le saldra al usuario
+return false;//Es parecido al break del loop. termina la operacion y no envia el formulario
+}
+
+if (hora <= 40){
+ingresobruto = hora * pago;
+}
+else{
+ingresobruto = (((hora - 40) * 1.5) * pago) + (40 * pago); //1.5 medio tiempo de mas
+}
+document.getElementById("ingresobruto").value = ingresobruto; //<!--se deposita el valor que nos dio de ingreso bruto-->
+}
+</script>
+<body>
+<label class="text">
+Indique las horas trabajadas:
+</label>
+<br>
+<input class = "box" id= "hora" name= "hora"><br><br>
+<label class="text">
+Indique el pago por hora:
+</label>
+<br>
+<input class = "box" id= "pago" name= "pago"><br><br>
+<input id = "button" value = "Calculate" onclick = "calculate()" readonly/><br><br>
+<label class="text"> 
+El ingreso bruto es:
+</label>
+<br>
+<input class = "box" id = "ingresobruto" name = "ingresobruto" readonly><br><br>
+</body>
+</html>

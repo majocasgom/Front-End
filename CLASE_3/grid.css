@@ -1,0 +1,12 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 3 equal-width columns */
+    grid-gap: 10px; /* Space between grid items */
+  }
+
+  div {
+    background-color: aqua;
+  }
+
+
+  

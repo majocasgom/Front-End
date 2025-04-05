@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Text Color</title>
+</head>
+<body>
+
+  <h1>Click the Button to Change Text Color</h1>
+
+  <!-- Paragraph whose text color will be changed -->
+  <p id="text">This is a paragraph of text.</p>
+
+  <!-- Button to trigger the text color change -->
+  <button onclick="changeTextColor()">Change Text Color</button>
+
+  <script>
+    // Function to change the text color of the paragraph
+    function changeTextColor() {
+      // Get the paragraph element by its ID
+      let paragraph = document.getElementById("text");
+      
+      // Change the color of the text
+      paragraph.style.color = "blue"; // Change to blue color
+    }
+  </script>
+
+</body>
+</html>

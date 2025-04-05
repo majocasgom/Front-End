@@ -1,0 +1,32 @@
+.text{
+    color: rgb(40, 39, 98);
+    font-family: monospace;
+    font-size: x-large;
+    background-color: white;
+
+}
+#button{
+    background-color: black;
+    color:azure;
+    text-align: center;
+    font-family:monospace;
+    
+}
+.box{
+    font-family: monospace;
+    text-align: center;
+
+}
+body{
+    background-image: url('TRABAJADORES.jpg');
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    margin: 0; /* Elimina márgenes predeterminados */
+}
+
+

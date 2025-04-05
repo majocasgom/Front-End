@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Text from Input</title>
+</head>
+<body>
+
+  <h1>Change Text Example</h1>
+
+  <!-- Input field to enter new text -->
+  <input type="text" id="userInput" placeholder="Enter text here">
+
+  <!-- Button to trigger the DOM change -->
+  <button onclick="changeText()">Change Text</button>
+
+  <!-- Paragraph where the text will be updated -->
+  <p id="displayText">This text will change when you click the button.</p>
+
+  <script>
+    // Function to change the text of the paragraph based on input value
+    function changeText() {
+      // Get the input field and the paragraph
+      let inputText = document.getElementById("userInput").value;
+      let paragraph = document.getElementById("displayText");
+      
+      // Change the content of the paragraph
+      paragraph.textContent = inputText;
+    }
+  </script>
+
+</body>
+</html>

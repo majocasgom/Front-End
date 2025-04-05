@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="_4.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>//funcionBMI
+        function calculateBMI() {
+            var weigh = document.getElementById("weigh").value;
+            var height = document.getElementById("height").value;
+            var category = "";
+        
+            
+            var weighkg = weigh / 2.20462;
+            var heightm = height * 0.3048;
+            
+            var BMI = (weighkg / (heightm * heightm)).toFixed(2);//redondear un numero a decimales
+        
+            if (BMI < 18.5) {
+                category = "Bajo peso";
+            } else if (BMI <= 24.9) {
+                category = "Peso normal";
+            } else if (BMI <= 29.9) {
+                category = "Sobrepeso";
+            } else {
+                category = "Obeso";
+            }
+        
+            document.getElementById("BMI").value = BMI + " - " + category;
+        }
+        </script>
+         <script>//funcion ingreso
+            function calculate()
+            {
+            var hora= document.getElementById("hora").value; <!--definir las variables-->
+            var pago= document.getElementById("pago").value;
+            var ingresobruto; //<!--ya defini ingreso bruto y no debo escribir de nuevo var-->
+            if(hora<0 || pago<0){
+            alert("Ingrese un valor positivo"); //Comentario que le saldra al usuario
+            return false;//Es parecido al break del loop. termina la operacion y no envia el formulario
+            }
+            
+            if (hora <= 40){
+            ingresobruto = hora * pago;
+            }
+            else{
+            ingresobruto = (((hora - 40) * 1.5) * pago) + (40 * pago); //1.5 medio tiempo de mas
+            }
+            document.getElementById("ingresobruto").value = ingresobruto; //<!--se deposita el valor que nos dio de ingreso bruto-->
+            }
+            </script>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">Calculadoras</div>
+        <div class="sidebar">BMI<p>Es una fórmula que estima si tienes un peso saludable según tu peso y estatura. </p></div>
+        
+        <div id="main-content"> <label class = title>Indique su peso:</label><br>
+            <input class="textBox" id="weigh" name="weigh"><br><br>
+        
+            <label class = title>Indique su altura:</label><br>
+            <input class="textBox" id="height" name="height"><br><br>
+        
+            <input  id="button" value="calculateBMI" onclick="calculateBMI()"><br><br>
+        
+            <label class = title>El BMI es:</label><br>
+            <input class="textBox" id="BMI" name="BMI"><br><br></div>
+
+        <div class="main-content">Ingreso Neto<p>Es el total de dinero que ganas antes de impuestos o deducciones.
+
+            <P>Si trabajas por horas:</P>
+            
+            <P>Si trabajas ≤ 40 horas: ingreso = horas × pago/hora</P>
+            
+            <p>Si trabajas > 40 horas: las horas extra se pagan al 1.5×</p></div>
+            <div id="main-content"> <label class="text">
+               
+                    
+                    <label>
+                    Indique las horas trabajadas:
+                    </label>
+                    <br>
+                    <input type = "text" id= "hora" name= "hora"><br><br>
+                    <label>
+                    Indique el pago por hora:
+                    </label>
+                    <br>
+                    <input type = "text" id= "pago" name= "pago"><br><br>
+                    <input type = "button" value = "Calculate" onclick = "calculate()"/><br><br>
+                    <label> 
+                    El ingreso bruto es:
+                    </label>
+                    <br>
+                    <input type = "text" id = "ingresobruto" name = "ingresobruto"><br><br>
+                
+        
+      </div>
+      
+     
+</body>
+</html>

@@ -1,0 +1,80 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  h2 {
+    color: #4CAF50;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  /* Flex Container Basic Styling */
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    border: 2px solid #ccc;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .flex-item {
+    background-color: #bbdefb;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  /* Flex Container with justify-content */
+  .justify-content-container {
+    justify-content: space-around; /* Distributes items with equal space */
+  }
+  
+  /* Flex Container with align-items */
+  .align-items-container {
+    align-items: flex-start; /* Aligns items at the start of the container */
+  }
+  
+  /* Flex Container with flex-direction */
+  .flex-direction-container {
+    flex-direction: column; /* Stacks items vertically */
+  }
+  
+  /* Flex Container with align-self */
+  .align-self-container .self-align {
+    align-self: flex-end; /* Aligns item to the end of the container */
+  }
+  
+  /* Flex Container with flex-wrap */
+  .flex-wrap-container {
+    flex-wrap: wrap; /* Allows items to wrap onto new lines */
+  }
+  
+  /* Flex Container with order */
+  .order-container .order-2 {
+    order: 2; /* Changes the order of this item to be second */
+  }
+  
+  .order-container .order-3 {
+    order: 3; /* Changes the order of this item to be third */
+  }
+  
+  /* Adjusting Flexbox for responsiveness */
+  @media (max-width: 768px) {
+    .flex-container {
+      flex-direction: column; /* Stacks flex items vertically on smaller screens */
+    }
+  }
+  

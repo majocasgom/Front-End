@@ -1,0 +1,25 @@
+.title{
+    text-align: center;
+    font-family:fantasy;   
+}
+.button{
+    width: 120px;   /* Ancho */
+    height: 10px;   /* Alto */
+    padding: 10px;  /* Espaciado interno */
+    font-size: 15px; /* Tamaño de texto */
+    text-align: center;
+    box-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(131, 24, 79);
+}
+.textBox{
+    font-family: cursive;
+    text-align: center;
+}
+#main{
+    background-color: rgb(240, 221, 221);
+    border: 25px;
+    text-align: center;
+    margin: 150;
+    
+}

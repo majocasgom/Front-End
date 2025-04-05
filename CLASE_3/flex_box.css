@@ -1,0 +1,14 @@
+.flex-item {
+    background-color: #a67f24;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    text-align:center;
+    flex-grow: 1;
+  }
+  .flex-container {
+    text-align: center;
+    display:list-item;
+    justify-content: center;
+    align-items:center;
+  }

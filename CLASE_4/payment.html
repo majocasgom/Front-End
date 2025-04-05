@@ -1,0 +1,41 @@
+<html>
+<head>
+<script>
+function calculate()
+{
+var p = document.getElementById("principal").value; <!--definir las variables-->
+var r = document.getElementById("rate").value;
+var n = document.getElementById("payment").value;
+var r1 = r/(100*12); //r sera entero / 100 queda % y 12 meses = anual se divide la tasa total en 12 para el pago mesual
+var a = p*(parseFloat(r1)*Math.pow(1+parseFloat(r1),n))/(Math.pow(1+parseFloat(r1),n)-1);
+document.getElementById("paymentamount").value="$"+parseFloat(parseFloat(a).toFixed(2));
+}
+</script>
+</head>
+<body> 
+<h1 id = "title">Amortization Payment Calculator</h2>
+<br>
+<label>
+Loan Amount
+</label>
+<br>
+<input type = "text" id = "principal" name = "principal"><br><br>
+<label>
+Interest Rate
+</label>
+<br>
+<input type = "text" id = "rate" name = "rate"><br><br>
+<label>
+Number of payments
+</label>
+<br>
+<input type = "text" id = "payment" name = "payment"><br><br>
+<input type = "button" value = "Calculate" onclick = "calculate()"/><br><br>
+<label>
+Actual Payment Amount per Period
+</label>
+<br>
+<input type = "text" id = "paymentamount" name = "paymentamount"><br><br>
+
+</body>
+</html>

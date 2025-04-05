@@ -1,0 +1,58 @@
+.flex-container{
+    text-align: center;
+    display:list-item;
+    justify-content: center;
+    align-items:center;
+}
+.flex-item{
+background-color: #a67f24;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    text-align:center;
+    flex-grow: 1;
+}
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Grid Container */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Sidebar takes 1 part, main content takes 3 parts */
+    grid-template-rows: auto 1fr auto; /* Header and footer auto height, content takes available space */
+    grid-gap: 20px; /* Space between grid items */
+    padding: 20px;
+  }
+  
+  /* Grid Items */
+  .header, .sidebar,.main-content,.footer {
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+  }
+  #main-content{
+    padding: 20px;
+    background-color: #1d611f;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    
+
+  }
+
+  
+  /* Header Style */
+  .header {
+    grid-column: span 2; /* Header spans across both columns */
+  }
+  #button{
+    text-align: center;
+    font-family: monospace;
+  }
+  
