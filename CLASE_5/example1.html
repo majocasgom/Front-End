@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Visibility with Button</title>
+  <style>
+    #messageBox {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 100px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <button id="toggleButton">Toggle Visibility</button>
+
+ 
+  <div id="messageBox">This is a message box.</div>
+
+  <script>
+   
+    const toggleButton = document.getElementById('toggleButton');
+    const messageBox = document.getElementById('messageBox');
+
+   
+    toggleButton.addEventListener('click', function() {
+     
+      if (messageBox.style.display === 'none') {
+        messageBox.style.display = 'block';
+      } else {
+        messageBox.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>

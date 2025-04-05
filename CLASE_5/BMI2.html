@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <link rel = "stylesheet" href = "BMI.css">
+          
+      </head>
+<script>
+function calculate() {
+    var weigh = document.getElementById("weigh").value;
+    var height = document.getElementById("height").value;
+	var category = "";
+
+    
+    var weighkg = weigh / 2.20462;
+    var heightm = height * 0.3048;
+	
+    var BMI = (weighkg / (heightm * heightm)).toFixed(2);//redondear un numero a decimales
+
+    if (BMI < 18.5) {
+        category = "Bajo peso";
+    } else if (BMI <= 24.9) {
+        category = "Peso normal";
+    } else if (BMI <= 29.9) {
+        category = "Sobrepeso";
+    } else {
+        category = "Obeso";
+    }
+
+    document.getElementById("BMI").value = BMI + " - " + category;
+}
+</script>
+
+<body id = main>
+    <label class = title>Indique su peso:</label><br>
+    <input class="textBox" id="weigh" name="weigh"><br><br>
+
+    <label class = title>Indique su altura:</label><br>
+    <input class="textBox" id="height" name="height"><br><br>
+
+    <input  class="button" value="Calculate" onclick="calculate()"><br><br>
+
+    <label class = title>El BMI es:</label><br>
+    <input class="textBox" id="BMI" name="BMI"><br><br>
+</body>
+</html>

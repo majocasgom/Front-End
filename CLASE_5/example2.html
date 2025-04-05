@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Move Background Color Change</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+
+    #colorBox {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="colorBox"></div>
+
+  <script>
+    // Get the div element
+    const colorBox = document.getElementById("colorBox");
+
+    // Add a mousemove event listener to the document
+    document.addEventListener("mousemove", function(event) {
+      // Calculate RGB values based on mouse position
+      let red = Math.floor((event.clientX / window.innerWidth) * 255);
+      let green = Math.floor((event.clientY / window.innerHeight) * 255);
+      let blue = 150; // Fixed value for blue
+
+      // Set the background color of the div using the calculated RGB values
+      colorBox.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+    });
+  </script>
+
+</body>
+</html>

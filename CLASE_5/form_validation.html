@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="MajoForm">
+    <input type="number" id="phoneNumber" placeholder="Phone Number" maxlength="10" required><!--type=number no deja colocar letras-->
+    <label>Acepto terminos y condiciones.</label>
+    <input type="checkbox" id="accept" placeholder="accept" required>
+    <button type="submit">Submit</button>
+    
+    </form>
+
+    <script>
+      document.getElementById("MajoForm").addEventListener("submit", function(event) {
+        let phoneNumber = document.getElementById("phoneNumber").value;
+        if (!phoneNumber) {
+            alert("Please fill out all required fields.");
+            event.preventDefault();
+          }
+        });
+        document.getElementById("MajoForm").addEventListener("submit", function(event) {
+            // Verificar si el checkbox está marcado
+            let termsAccepted = document.getElementById("terms").checked;
+
+            // Si no está marcado, mostrar la alerta y evitar el envío del formulario
+            if (!termsAccepted) {
+                alert("You must accept the terms and conditions before submitting.");
+                event.preventDefault(); // Evitar el envío del formulario
+            }
+        });    
+    
+    </script>
+    
+    
+</body>
+</html>

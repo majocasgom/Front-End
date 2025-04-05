@@ -1,0 +1,44 @@
+#nav{
+    background-color: #0e3c87;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      justify-content: center; /* ¡Esto centra el contenido! */
+}
+  
+.nav-link{
+    color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.1s;
+      margin-right: 80px;
+      margin-left: 30px; /* para que no se peguen al logo */
+      
+    }
+
+ .nav-link:hover {
+      color: #d6e4f0;
+    }
+.logo{
+    width: 90px;
+    height: 50px;
+}
+#visor{
+    width: 315px;
+    height: 300px;
+    
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+  }
